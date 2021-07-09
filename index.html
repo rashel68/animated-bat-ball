@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat ball animation</title>
+    <style>
+        .field{
+            border: 5px dotted green;
+        }
+        .bat{
+            width: 300px;
+            height: 300px;
+            transition: transform 0.2s ease-in;
+         
+        }
+        .bat img{
+            width: 100%;
+        }
+       .field:hover .bat{
+            transform: rotate(-60deg);
+            transform-origin: top right;
+        }
+        .ball{
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 65% 15%, yellow 1px, green 3%, yellow 60%, green 100%); 
+            border-radius: 20px;
+            position:relative;
+            left: 388px;
+            transition: transform 0.4s ease-out 0.3s;
+        }
+        .field:hover .ball{
+            transform: translate(800px, -200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="field">
+        <div class="bat">
+            <img src="bat.png" alt="">
+        </div>
+        <div class="ball"></div>
+    </div>
+    
+</body>
+</html>
